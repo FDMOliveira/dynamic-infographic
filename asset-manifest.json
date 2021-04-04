@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dynamic-infographic/static/css/main.b95dca0b.chunk.css",
+    "main.js": "/dynamic-infographic/static/js/main.af929a22.chunk.js",
+    "main.js.map": "/dynamic-infographic/static/js/main.af929a22.chunk.js.map",
+    "runtime-main.js": "/dynamic-infographic/static/js/runtime-main.8b06e205.js",
+    "runtime-main.js.map": "/dynamic-infographic/static/js/runtime-main.8b06e205.js.map",
+    "static/js/2.791c536d.chunk.js": "/dynamic-infographic/static/js/2.791c536d.chunk.js",
+    "static/js/2.791c536d.chunk.js.map": "/dynamic-infographic/static/js/2.791c536d.chunk.js.map",
+    "static/js/3.000cf20d.chunk.js": "/dynamic-infographic/static/js/3.000cf20d.chunk.js",
+    "static/js/3.000cf20d.chunk.js.map": "/dynamic-infographic/static/js/3.000cf20d.chunk.js.map",
+    "index.html": "/dynamic-infographic/index.html",
+    "static/css/main.b95dca0b.chunk.css.map": "/dynamic-infographic/static/css/main.b95dca0b.chunk.css.map",
+    "static/js/2.791c536d.chunk.js.LICENSE.txt": "/dynamic-infographic/static/js/2.791c536d.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/dynamic-infographic/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8b06e205.js",
+    "static/js/2.791c536d.chunk.js",
+    "static/css/main.b95dca0b.chunk.css",
+    "static/js/main.af929a22.chunk.js"
+  ]
+}
