@@ -1,38 +1,173 @@
-.App {
-  text-align: center;
+body * {
+    font-family: 'Comfortaa';
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.infograph,
+.infograph > * {
+    position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.infograph > * img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 100vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html {
+    width: 100vw;
+    position: relative;
 }
-
-.App-link {
-  color: #61dafb;
+body {
+    margin: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image {
+    width: 100%;
+    position: relative;
+}
+.image img {
+    width: 100%;
+    cursor: crosshair;
+}
+.markers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.new-marker {
+    transform: scale(0);
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    position: relative; 
+    max-width: 200px;
+    z-index: 2;
+}
+.new-marker div {
+    width: 100%;
+    position: relative;
+}
+.new-marker input {
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    font-weight: bold;
+}
+.new-marker.on {
+    transform: scale(1);
+    pointer-events: all;
+}
+.new-marker div:first-child {
+    border-radius: 20px 20px 0 0;
+    background: rgb(81 93 26)
+}
+.new-marker div:nth-child(2) {
+    border-radius: 0 0 20px 20px;
+}
+.new-marker div:nth-child(2) input,
+.new-marker div:nth-child(2) input::-webkit-input-placeholder {
+    color: rgb(81 93 26)
+}
+.new-marker div:first-child input::-webkit-input-placeholder {
+    color: white;
+}
+.new-marker div:nth-child(2) {
+    background-color: white;
+}
+.marker .actions {
+    position: absolute;
+    right: -10px;
+    top: -7px;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.marker .actions > * {
+    transition: all 0.25s ease;
+}
+.marker .actions > *:last-child {
+    transition: all 0.25s ease 0.1s;
+    margin-left: 2px;
+}
+.marker .actions > * {
+    position: relative;
+    height: 100%;
+    width: 15px;
+    height: 15px;
+    transform: scale(0);
+    cursor: pointer;
+    background: rgb(87, 87, 87);
+    border-radius: 100%;
+}
+.marker .close::after {
+    transform: rotate(-45deg);
+}
+.marker .close::before {
+    transform: rotate(45deg);
+}
+.marker .actions *::after,
+.marker .actions .close::before {
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 1px;
+    content: '';
+    width: 50%;
+}
+.marker:hover .actions > * {
+    transform: scale(1);
+}
+.new-marker div:last-child {
+    max-width: 50%;
+    margin-left: auto;
+    user-select: none;
+    cursor: pointer;
+    text-align: right;
+    transform: translateY(-15px);
+    background: white;
+    padding: 20px 10px 10px;
+    border-radius: 0 0 20px 20px;
+    opacity: 1;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.marker {
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    z-index: 1;
+}
+.marker:hover .text {
+    opacity: 1;
+} 
+.marker .text > .title {
+    margin-bottom: 10px;
+}
+.marker .text {
+    position: absolute;
+    top: -100px;
+    left: -100%;
+    padding: 20px;
+    background-color: rgb(0 0 0 / 43%);
+    box-shadow: 1px 1px 8px rgb(0 0 0 / 34%);
+    width: 100px;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+    color: white;
+}
+.marker::after {
+    position: absolute;
+    top: 0;left: 0;
+    font-size: 40px;
+    color: rgb(171 118 54);
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f3c5";
+}
+@media screen and (min-width:1199px) {
+    .image {
+        max-width: 50vw;
+        margin: 0 auto;
+    }
 }
